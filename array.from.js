@@ -45,10 +45,10 @@ return result2
 
 //crie um array que inicia com 5 e termmine com 8
 
-function rodar3(i,valorIniial){
+const rodar3 = (i,valorIniial)=>{
 
-    if(rodar3.length < 2){
-        Rodar
+    if(valorIniial == 0){
+      return  Rodar(i)
     }
 
     const  mapFn=  (valor, position)=>{
@@ -61,8 +61,40 @@ return result
 
 }
 
-const valorIniial = 5
+const nun = 0 //caso queira passar so um argumeto
+const valorIniial = 5 
 const valorFinal = 8
 const i = (valorFinal-valorIniial)+1
-const a = rodar3(i,valorIniial)
+const a = rodar3(i,nun) 
 console.log(a)
+const b = rodar3(i,valorIniial)
+console.log(b)
+
+
+
+//criar um array de "A"  a "Z"
+
+function play(num1, num2){
+
+const mapFn = (valor, position)=>{
+    const letra = valor = num2 + position
+    const posi = position + 1
+    
+    const alfabeto =  String.fromCharCode(letra)
+    
+   // return ` ${posi}:${alfabeto}`
+   return alfabeto
+}
+
+ const result = Array.from({length:num1}, mapFn)
+
+ return result
+
+}
+
+const valicial = 'A'.charCodeAt(0)
+const valfinal = 'Z'.charCodeAt(0)
+const quant =   (valfinal - valicial) + 1
+
+console.log(play(quant,valicial))
+
