@@ -96,5 +96,10 @@ const valicial = 'A'.charCodeAt(0)
 const valfinal = 'Z'.charCodeAt(0)
 const quant =   (valfinal - valicial) + 1
 
-console.log(play(quant,valicial))
+//console.log(play(quant,valicial))
 
+// segunda forma de ultilizar um array de A a Z ULTILIZANDO AS FUNCTION RODAR3, CRIADA ANTERIOMENTE
+const results = rodar3(quant, valicial).map(n => String.fromCharCode(n))
+
+
+//criar um array de meses do ano, onde cada posiçao do array corresponde a um nome 
