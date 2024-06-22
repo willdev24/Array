@@ -1,19 +1,17 @@
 
 
-
-
 // -cria um array de um iterable( string, map, set) ou de um array=like
 // -aceita 3 parametros: <Iterable or array-like, [mapFn?], thisArg?
 
 //bora brincar
 
 
-//criar 1 Array com 7 posiçoes 
+//criar 1 Array com 7 posiçoes// 
 
 const result = Array.from('1234567')
-console.log(result  )
+//console.log(result  )
 
-//criar um array om 70 posiçoes 
+//criar um array om 70 posiçoes //
 
 function rodarArray(val){   //coloquei dendro da funçao para nao ficar rodando toa hora
 const result1 = Array.from({length:val})
@@ -24,12 +22,12 @@ for(let i =0; i <= val;i++){
     result1.splice(i,1, i)
 }
 
-console.log(result1.length)
-console.log(result1)
+//console.log(result1.length)
+//console.log(result1)
 
 }
 
-// criar um array [1,2,3,4,5,6]
+// criar um array [1,2,3,4,5,6]//
 
 function  Rodar (val){
 
@@ -43,7 +41,7 @@ return result2
 
     
 
-//crie um array que inicia com 5 e termmine com 8
+//crie um array que inicia com 5 e termmine com 8//
 
 const rodar3 = (i,valorIniial)=>{
 
@@ -66,13 +64,13 @@ const valorIniial = 5
 const valorFinal = 8
 const i = (valorFinal-valorIniial)+1
 const a = rodar3(i,nun) 
-console.log(a)
+//console.log(a)
 const b = rodar3(i,valorIniial)
-console.log(b)
+//console.log(b)
 
 
 
-//criar um array de "A"  a "Z"
+//criar um array de "A"  a "Z"//
 
 function play(num1, num2){
 
@@ -102,4 +100,39 @@ const quant =   (valfinal - valicial) + 1
 const results = rodar3(quant, valicial).map(n => String.fromCharCode(n))
 
 
-//criar um array de meses do ano, onde cada posiçao do array corresponde a um nome 
+//criar um array de meses do ano, onde cada posiçao do array corresponde a um nome (desafio 7)//
+
+const mesDoano = (val)=>{
+
+    const mapFn = (valor, position)=>{
+        const mes = position 
+        const datas = new Date(0,mes)
+       
+
+        return  datas.toLocaleString("pt-BR",{month:'long'})
+    }
+    
+const resultMes = Array.from({length:val}, mapFn)
+
+return resultMes
+}
+
+//console.log(mesDoano(12))
+
+//Seguindo os mesmos passos do exercício anterior, crie os dias da semana em formato longo //
+function diasDasemana(val){
+
+    const dias = Array.from({length:val},(valor, position)=>{
+
+        const val = position + 1
+        const semana = new Date(2024,6,val)
+        const awdw =  semana.toLocaleString("pt-BR",{dateStyle:'full'})
+       return awdw         
+    })
+
+    return dias
+}
+
+
+
+console.log(diasDasemana(7))
