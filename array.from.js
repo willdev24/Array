@@ -126,13 +126,15 @@ function diasDasemana(val){
 
         const val = position + 1
         const semana = new Date(2024,6,val)
-        const awdw =  semana.toLocaleString("pt-BR",{dateStyle:'full'})
-       return awdw         
+        const awdw =  semana.toLocaleString("pt-BR",{weekday:'long'})
+        const  menor =  semana.toLocaleString("pt-BR",{weekday:'short'})
+        
+        return awdw
     })
 
     return dias
 }
 
+const menor = diasDasemana(7)
 
-
-console.log(diasDasemana(7))
+console.log(menor)
