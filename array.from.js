@@ -98,7 +98,7 @@ const quant =   (valfinal - valicial) + 1
 
 // segunda forma de ultilizar um array de A a Z ULTILIZANDO AS FUNCTION RODAR3, CRIADA ANTERIOMENTE
 const results = rodar3(quant, valicial).map(n => String.fromCharCode(n))
-
+//console.log(results)
 
 //criar um array de meses do ano, onde cada posiçao do array corresponde a um nome (desafio 7)//
 
@@ -117,7 +117,7 @@ const resultMes = Array.from({length:val}, mapFn)
 return resultMes
 }
 
-//console.log(mesDoano(12))
+console.log(mesDoano(12))
 
 //Seguindo os mesmos passos do exercício anterior, crie os dias da semana em formato longo //
 function diasDasemana(val){
@@ -137,4 +137,4 @@ function diasDasemana(val){
 
 const menor = diasDasemana(7)
 
-console.log(menor)
+//console.log(menor)
